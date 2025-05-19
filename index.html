@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Content Generation Tool</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Content Generator</h1>
+
+        <div class="section">
+            <h2>Summarize</h2>
+            <textarea id="summaryInput" placeholder="Paste text here..."></textarea>
+            <button onclick="summarize()">Generate Summary</button>
+            <pre id="summaryOutput"></pre>
+        </div>
+
+        <div class="section">
+            <h2>Generate Content</h2>
+            <input type="text" id="generatePrompt" placeholder="Enter a prompt...">
+            <button onclick="generate()">Generate</button>
+            <pre id="generateOutput"></pre>
+        </div>
+
+        <div class="section">
+            <h2>Classify</h2>
+            <textarea id="classifyInput" placeholder="Enter content to classify..."></textarea>
+            <button onclick="classify()">Classify</button>
+            <pre id="classifyOutput"></pre>
+        </div>
+
+        <div class="section">
+            <h2>Keyword Optimization</h2>
+            <textarea id="keywordInput" placeholder="Enter content..."></textarea>
+            <button onclick="extractKeywords()">Extract Keywords</button>
+            <pre id="keywordOutput"></pre>
+        </div>
+    </div>
+
+    <script src="assets/js/scripts.js"></script>
+
+<div class="section">
+    <h2>Text-to-Speech (Podcast)</h2>
+    <textarea id="ttsInput" placeholder="Enter content to convert to speech..."></textarea>
+    <button onclick="textToSpeech()">Convert to Audio</button>
+    <p><audio id="audioPlayer" controls></audio></p>
+</div>
+
+<div class="section">
+    <h2>Speech-to-Text (Dictation)</h2>
+    <input type="file" id="sttFile" accept="audio/*">
+    <button onclick="transcribeAudio()">Transcribe</button>
+    <pre id="sttOutput"></pre>
+</div>
+</body>
+</html>
+
